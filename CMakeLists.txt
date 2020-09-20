@@ -11,3 +11,6 @@ add_library(nxjson STATIC
 if(BUILD_TEST)
     add_subdirectory(test)
 endif()
+
+install(TARGETS nxjson)
+install(FILES ${CMAKE_CURRENT_LIST_DIR}/nxjson.h DESTINATION include)
