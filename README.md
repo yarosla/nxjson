@@ -119,7 +119,7 @@ Some versions of CMake might be confused by the first line:
 ```sh
 cmake -B build
 ```
-If that is the case for you, generate the build directory like shwon here instead:
+If that is the case for you, generate the build directory like shown here instead:
 ```sh
 mkdir build
 cd build
