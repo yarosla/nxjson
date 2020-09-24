@@ -108,7 +108,7 @@ If there is no such item/property returns *dummy* node of type `NX_JSON_NULL`. N
 nxjson requires CMake in order to be compiled.  
 To compile nxjson, download the repository and open the directory in a terminal; after that, run the following:
 ```sh
-cmake -B build                      # Add "-DBUILD_TESTS=ON" if you want to build the test program.
+cmake -B build                      # Add "-DBUILD_TEST=ON" if you want to build the test program.
 cmake --build build --config Debug  # Use the config switch for multi-config generators like Visual Studio to change your build configuration.
 
 # To install:
