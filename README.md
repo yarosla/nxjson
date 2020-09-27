@@ -144,8 +144,7 @@ C API:
 ```sh
 cmake -B build                        # Add "-DBUILD_TEST=OFF" to disable building tests
 cmake --build build --config Release  # Use the config switch for multi-config generators like Visual Studio to change your build configuration.
-cd test
-ctest -C Release --verbose
+pushd build/test; ctest -C Release --verbose; popd
 
 # To install:
 cmake --install build --config Release --prefix nxjson-install # Use prefix to select your own install path; CMake will use the default directory (Program Files (x86) on Windows, /usr/local on most Linux distributions etc.) otherwise.
@@ -158,8 +157,7 @@ mkdir build
 cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release  # Add "-DBUILD_TEST=OFF" to disable building tests
 cmake --build . --config Release
-cd test
-ctest -C Release --verbose
+pushd test; ctest -C Release --verbose; popd
 
 # To install:
 cmake --install . --config Release
