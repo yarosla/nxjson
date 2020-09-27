@@ -14,8 +14,3 @@ endif()
 
 install(TARGETS nxjson ARCHIVE DESTINATION lib)
 install(FILES ${CMAKE_CURRENT_LIST_DIR}/nxjson.h DESTINATION include)
-
-if(BUILD_TEST)
-    install(FILES $<TARGET_FILE:nxjson-test> DESTINATION bin)
-    install(DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/test/tests DESTINATION share)
-endif()
