@@ -173,7 +173,7 @@ static int run_test(int test_number, char* input, const char* expected_output) {
   }
 }
 
-static void run_tests() {
+static int run_tests() {
   char infile[32];
   char expfile[32];
   int i, total=0, passed=0;
@@ -189,9 +189,9 @@ static void run_tests() {
     if (expected_output) free(expected_output);
   }
   printf("\nPASSED %d OUT OF %d\n", passed, total);
+  return total == passed ? 0 : 1;
 }
 
 int main() {
-  run_tests();
-  return 0;
+  return run_tests();
 }

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
 project(nxjson C)
 
-option(BUILD_TEST "Builds the test program." OFF)
+option(BUILD_TEST "Builds the test program." ON)
 
 add_library(nxjson STATIC
     ${CMAKE_CURRENT_LIST_DIR}/nxjson.h
