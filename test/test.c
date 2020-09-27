@@ -23,10 +23,10 @@
 #include <malloc.h>
 #include <assert.h>
 #include <sys/stat.h>
-#include <unistd.h>
+//#include <unistd.h>
 #include <fcntl.h>
 
-#include "nxjson.h"
+#include "../nxjson.h"
 
 #define ERROR(msg, p) fprintf(stderr, "ERROR: " msg " %s\n", (p));
 

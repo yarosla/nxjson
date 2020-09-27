@@ -3,7 +3,7 @@ NXJSON
 
 Very small JSON parser written in C.
 
-##Features
+## Features
 
 - Parses JSON from null-terminated string
 - Easy to use tree traversal API
@@ -104,6 +104,27 @@ If `json` points to `OBJECT` node returns object's property identified by index 
 
 If there is no such item/property returns *dummy* node of type `NX_JSON_NULL`. Never returns literal `NULL`.
 
+## Building
+nxjson requires CMake in order to be compiled.  
+To compile nxjson, download the repository and open the directory in a terminal; after that, run the following:
+```sh
+cmake -B build                      # Add "-DBUILD_TEST=ON" if you want to build the test program.
+cmake --build build --config Debug  # Use the config switch for multi-config generators like Visual Studio to change your build configuration.
+
+# To install:
+cmake --install build --config Debug --prefix nxjson-install # Use prefix to select your own install path; CMake will use the default directory (Program Files (x86) on Windows, /usr/local on most Linux distributions etc.) otherwise.
+```
+
+Some versions of CMake might be confused by the first line:
+```sh
+cmake -B build
+```
+If that is the case for you, generate the build directory like shown here instead:
+```sh
+mkdir build
+cd build
+cmake ..    # Add "-DBUILD_TESTS=ON" here if you want to build the test program, just like for the -B command.
+```
 
 ## Usage Example
 
@@ -140,10 +161,10 @@ C API:
       nx_json_free(json);
     }
 
-##License
+## License
 
 LGPL v3
 
-##Copyright
+## Copyright
 
 Copyright (c) 2013 Yaroslav Stavnichiy <yarosla@gmail.com>
